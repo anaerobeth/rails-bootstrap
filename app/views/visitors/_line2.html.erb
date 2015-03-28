@@ -1,19 +1,115 @@
 <script type='text/javascript'>
+  <!-- variables needed to set x-axis label background -->
+
   $(function () {
     new Highcharts.Chart({
       chart:  {
         renderTo: 'response_graph',
+        type: 'line',
+        events: {
+          <!-- drawRect() paints the x-axis label background -->
+          load: function() {
+            drawRect(this);
+          },
+          redraw: function(){
+            drawRect(this);
+          }
+        }
       },
+
       title: {
-        text: 'Teacher'
+        text: null
       },
+
+      xAxis: {
+        type: 'datetime',
+        dateTimeLabelFormats: {
+          day: '%m/%e'
+        },
+        tickLength: 0,
+        <!-- TODO: figure out a better way to expand the graph area beyond the first and last values-->
+        min: 1423802000000,
+        max: 1424470400000,
+        title: {
+          text: null
+        },
+        labels: {
+          useHTML: true,
+          style: {
+            paddingTop: '5px',
+            paddingBottom: '5px',
+          }
+        }
+      },
+
+      yAxis: {
+        title: {
+          text: null
+        },
+        labels: {
+          formatter: function() {
+            switch (this.value) {
+              case 0:
+                return '0%';
+              case 50:
+                return '50%';
+              case 100:
+                return '100%';
+              default:
+                return '';
+            }
+          }
+        },
+        min: 0,
+        max: 100,
+        offset: 10
+      },
+
+      legend: {
+        enabled: false
+      },
+
+      credits: false,
+
       series: [{
-        name: 'Jane',
-        data: [1, 0, 4]
-      }, {
-        name: 'John',
-        data: [5, 7, 3]
+        name: 'LEGEND GREEN',
+        color: '#99CC00',
+        marker: {
+          symbol: 'square'
+        },
+        data: [
+          [Date.UTC(2015, 1, 14), 5],
+          [Date.UTC(2015, 1, 15), 45],
+          [Date.UTC(2015, 1, 16), 47],
+          [Date.UTC(2015, 1, 17), 60],
+          [Date.UTC(2015, 1, 18), 55],
+          [Date.UTC(2015, 1, 19), 49],
+          [Date.UTC(2015, 1, 20), 47]
+        ]
       }]
     });
+
+    <!-- remove lines crossing the square legends -->
+    $('#response_graph .highcharts-legend-item path').attr('stroke-width','0');
   });
+
+    <!-- add background color to x-axis labels; ref http://jsfiddle.net/MJ6U6/2/ -->
+    var rect = null;
+    function drawRect(chart){
+      if (rect){
+        rect.element.remove();
+      }
+      var xAxis = chart.xAxis[0];
+      var pixStart = 0;
+      var pixEnd = xAxis.toPixels (xAxis.tickPositions[tickEnd], false);
+      rect = chart.renderer.rect(pixStart, chart.chartHeight - xAxis.bottom, pixEnd - pixStart , 25, 00)
+        .attr({
+          'stroke-width': 0,
+          stroke: '#E8E8E8',
+          fill: '#E8E8E8',
+          zIndex: 3
+        })
+      .add();
+    }
+
 </script>

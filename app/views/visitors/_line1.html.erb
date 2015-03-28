@@ -18,17 +18,35 @@
         tickLength: 0,
         title: {
           text: null
+        },
+        labels: {
+          useHTML: true,
+          style: {
+            paddingTop: '5px',
+            paddingBottom: '5px',
+          }
         }
       },
 
       yAxis: {
-        categories: ['Low', '', '', '', 'High'],
         title: {
           text: null
         },
+        labels: {
+          formatter: function() {
+            switch (this.value) {
+              case 0:
+                return 'Low';
+              case 4:
+                return 'High';
+              default:
+                return '';
+            }
+          }
+        },
         min: 0,
         tickInterval: 1,
-        offset: 5
+        offset: 10
       },
 
       legend: {
@@ -85,8 +103,9 @@
         ]
       }]
     });
-    $('.highcharts-legend-item path').attr('stroke-width','0');
-  });
 
+    <!-- remove lines crossing the square legends -->
+    $('#community_graph .highcharts-legend-item path').attr('stroke-width','0');
+  });
 
 </script>
