@@ -1,5 +1,4 @@
 <script type='text/javascript'>
-
   $(function () {
     new Highcharts.Chart({
       chart:  {
@@ -33,7 +32,8 @@
       },
 
       legend: {
-        borderWidth: 0
+        borderWidth: 0,
+        borderHeight: 0
       },
 
       credits: false,
@@ -41,6 +41,9 @@
       series: [{
         name: 'LEGEND GREEN',
         color: '#99CC00',
+        marker: {
+          symbol: 'square'
+        },
         data: [
           [Date.UTC(2015, 1, 14), 0.2],
           [Date.UTC(2015, 1, 15), 0.8],
@@ -52,7 +55,10 @@
         ]
       }, {
         name: 'LEGEND BLUE',
-        color: 'blue',
+        color: '#00FFFF',
+        marker: {
+          symbol: 'square'
+        },
         data: [
           [Date.UTC(2015, 1, 14), 1.2],
           [Date.UTC(2015, 1, 15), 2.5],
@@ -64,7 +70,10 @@
         ]
       }, {
         name: 'LEGEND RED',
-        color: 'red',
+        color: '#FF00CC',
+        marker: {
+          symbol: 'square'
+        },
         data: [
           [Date.UTC(2015, 1, 14), 3],
           [Date.UTC(2015, 1, 15), 3.8],
@@ -76,5 +85,8 @@
         ]
       }]
     });
+    $('.highcharts-legend-item path').attr('stroke-width','0');
   });
+
+
 </script>
