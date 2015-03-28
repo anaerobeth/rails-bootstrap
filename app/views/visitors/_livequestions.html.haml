@@ -1,0 +1,22 @@
+%div.livequestions-section.panel
+  %ul.panel-heading
+    %li.livequestions-section__title
+      %h3
+        %strong Live
+        %span.lighten> Questions
+    %li
+      %ul
+        %li Weekly Limit
+        %li.livequestion-section__subhead
+          = button_tag '5 left out of 20', {class:"btn btn-sm btn-success"}
+= form_tag do
+  = field_set_tag do
+    = label_tag :text, 'Text'
+    = text_field_tag :text
+    = label_tag :response_options, 'Response Options'
+    = text_field_tag :response_options
+    = text_field_tag :response_options2
+    = text_field_tag :response_options3
+    = text_field_tag :response_options4
+    = text_field_tag :response_options5
+    = button_tag 'SEND NOW', {class:"btn btn-default btn-sm"}
