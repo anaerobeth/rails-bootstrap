@@ -1,0 +1,49 @@
+<script type='text/javascript'>
+  $(function () {
+    new Highcharts.Chart({
+      chart: {
+        renderTo: 'teacher_graph',
+        plotBackgroundColor: null,
+        plotBorderWidth: 0,
+        plotShadow: false
+      },
+
+      title: {
+        text: null,
+      },
+
+      legend: {
+        borderWidth: 0,
+        borderHeight: 0,
+      },
+
+      credits: false,
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+
+      plotOptions: {
+        pie: {
+          dataLabels: {
+            enabled: false
+          },
+          showInLegend: true,
+          startAngle: 0,
+          endAngle: 360,
+          center: ['50%', '50%']
+        }
+      },
+
+      series: [{
+        type: 'pie',
+        innerSize: '60%',
+        data: [
+          ['Strongly Agree', 15],
+          ['Somewhat Agree', 32],
+          ['Somewhat Disagree', 18],
+          ['Strongly Disagree', 35]
+        ]
+      }]
+    });
+  });
+</script>

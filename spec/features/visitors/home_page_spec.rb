@@ -7,7 +7,7 @@ feature 'Home page' do
     # header
     expect(page).to have_content 'LIVEDASHBOARD'
     expect(page).to have_content Time.current.strftime("%a %b %-d")
-    expect(page).to have_content Time.current.strftime("%-l %M %p")
+    expect(page).to have_content Time.current.strftime("%-l:%M %p")
 
     # school section
     within '.school-section' do
@@ -30,7 +30,7 @@ feature 'Home page' do
       end
 
       within '.tags-section__subject' do
-        expect(page).to have_input 'subject'
+        expect(page).to have_css 'input'
       end
 
       within '.tags-section__gender' do
