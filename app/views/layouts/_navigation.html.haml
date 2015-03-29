@@ -7,3 +7,6 @@
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         = render 'layouts/navigation_links'
+      %div.datebox.lighten.pull-right
+        %span.spacer= Time.current.strftime("%a %b %-d")
+        %span= Time.current.strftime("%-l:%M %p")

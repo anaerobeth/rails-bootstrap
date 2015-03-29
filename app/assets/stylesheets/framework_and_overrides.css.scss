@@ -44,3 +44,13 @@ section {
   @extend .row;
   margin-top: 20px;
 }
+
+ul {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.custom-padding {
+  padding: 5px !important;
+}
+

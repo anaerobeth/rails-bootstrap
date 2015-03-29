@@ -2,24 +2,25 @@
   %div.display-section__title.panel-heading
     %h3.text-uppercase
       %strong Display
-  %div.display-section__primary
-  = render 'visitors/criteria'
-  %div.display-section__secondary
+  %div.display-section__primary.bump-right
+    = render 'visitors/criteria'
+  %div.display-section__secondary.pull-right
+    %ul.push-down
+      %li.pull-left
+        %i.fa.fa-circle.bullet-epsilon
+        %span.nudge-right Composite
+      %li
+        %i.fa.fa-circle.bullet-epsilon.push-right
+        %span.nudge-right Separate
+    %p.line-separator.bump-right
+    %p.push-right-more.push-down Whose Responses?
     %ul
       %li
-        %i.fa.fa-circle
-        %span Composite
+        %i.fa.fa-circle.bullet-beta
+        %span.item-list Students
       %li
-        %i.fa.fa-circle
-        %span Separate
-    %p Whose Responses?
-    %ul
+        %i.fa.fa-circle.bullet-beta
+        %span.item-list Faculty
       %li
-        %i.fa.fa-circle
-        %span Students
-      %li
-        %i.fa.fa-circle
-        %span Faculty
-      %li
-        %i.fa.fa-circle
-        %span Parents
+        %i.fa.fa-circle.bullet-epsilon
+        %span.item-list Parents
