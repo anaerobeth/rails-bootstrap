@@ -15,4 +15,8 @@
 //= require bootstrap-sprockets
 //= require highcharts
 //= require highcharts/highcharts-more
+//= require bootstrap-datepicker
 //= require_tree .
+$('#calendar-section div').datepicker({});
+$('#calendar-section input').datepicker({
+});

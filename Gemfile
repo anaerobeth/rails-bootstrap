@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'font-awesome-rails'
 gem 'highcharts-rails'
+gem 'bootstrap-datepicker-rails'
 
 group :development, :test do
   gem 'byebug'
