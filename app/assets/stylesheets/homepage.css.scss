@@ -1,18 +1,14 @@
 // ----- Fonts and Colors -----
-$color-acme: #8AC007;
 $color-alpha: #0099FF;
-$color-beta: #33CC00;
+$color-beta: #8AC007;
 $color-gamma: #FF0099;
 $color-delta: #FFCC00;
 $color-epsilon: #C0C0C0;
 $color-epsilon-light: #F0F0F0;
+$color-zeta: #FFFFFF;
 
 .lighten {
   font-weight: 100;
-}
-
-.acme-theme-color {
-  color: $color-acme;
 }
 
 .bullet-alpha {
@@ -71,6 +67,10 @@ $item-padding: 5px;
   padding-top: 10px;
 }
 
+.push-down-more {
+  padding-top: 20px;
+}
+
 .push-right {
   padding-left: 20px;
 }
@@ -95,6 +95,9 @@ $item-padding: 5px;
   margin-right: 10px;
 }
 
+.bump-up {
+  margin-top: -20px;
+}
 // ----- Section styles -----
 
 $section-width: 228px;
@@ -112,6 +115,21 @@ $graph-height: 270px;
   display: inline-block;
   font-size: 30px;
   padding-top: 18px;
+}
+
+.people-section,
+.groups-section,
+.tags-section,
+.school-section {
+  a.list-group-item {
+    width: 95%;
+    margin: 0 auto;
+    border: none;
+    background-color: $color-epsilon-light;
+  }
+  p {
+    font-size: $section-font-size;
+  }
 }
 
 .display-section__primary,
@@ -132,10 +150,38 @@ $graph-height: 270px;
   margin-right: 10px;
 }
 
-.community-section {
+.community-section,
+.display-section,
+.school-section {
+  margin-top: 20px;
   p {
     font-size: $section-font-size;
   }
+}
+.school-section ul {
+  height: 200px;
+  overflow: auto;
+}
+
+.school-section ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $color-beta;
+}
+
+.school-section ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+.school-section ul::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.tags-section__subject,
+.tags-section__gender {
+  padding: 5px 10px 20px 10px;
 }
 
 .results-section__secondary {
@@ -153,6 +199,47 @@ $graph-height: 270px;
     background: $color-epsilon-light;
   }
 }
+
+.livequestions-section {
+  li {
+    display: inline-block;
+  }
+}
+
+.livequestions-section__counter {
+  padding: 3px 30px 3px 6px;
+  display: inline-block;
+  margin-left: 3px;
+  color: $color-zeta;
+  background-color: $color-beta;
+}
+
+.livequestions-section__form {
+   li {
+     display: block;
+   }
+   input.form-control{
+     margin-bottom: 4px;
+   }
+}
+
+.livequestions-section .control-label.question-label {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+textarea.form-control,
+input.form-control {
+  border: none;
+  background: $color-epsilon-light;
+  resize: none;
+
+  &.text-input {
+    margin-bottom: 15px;
+  }
+}
+
+// ----- Graphs and Charts ----
 
 .community-section__graph1,
 .community-section__graph2,
@@ -183,3 +270,4 @@ $graph-height: 270px;
   padding-top: 40px;
   display: inline-block;
 }
+
