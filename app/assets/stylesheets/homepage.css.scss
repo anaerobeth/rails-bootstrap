@@ -188,7 +188,7 @@ $section-font-size: 18px;
   }
 }
 .school-section ul {
-  height: 200px;
+  height: 130px;
   overflow: auto;
 }
 
@@ -208,10 +208,34 @@ $section-font-size: 18px;
   background-color: #F5F5F5;
 }
 
+ul.tags-section__grade-items {
+  margin-bottom: 0;
+}
+
+.tags-section__grade,
 .tags-section__subject,
 .tags-section__gender {
   padding: 5px 10px 20px 10px;
+  background: $color-epsilon-light;
+  margin-top: 2px;
+  font-size: 12px;
+  p {
+    font-size: 14px;
+    padding-left: 5px;
+  }
 }
+
+.tags-section__grade-items.list-group.grade-levels li{
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  text-align: center;
+  a {
+    padding: 5px 0;
+    background-color: #FFFFFF;
+  }
+}
+
 
 .results-section__secondary {
   width: $section-width;

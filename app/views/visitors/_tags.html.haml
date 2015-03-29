@@ -1,27 +1,28 @@
 %div.tags-section.panel.custom-padding
   %p.tags-section__title.panel-heading Tags
-  %div.tags-section__grade
-    Grade
-    %ul.tags-section__grade-items.list-group
-      %li
-        %a.list-group-item 9
-      %li
-        %a.list-group-item 10
-      %li
-        %a.list-group-item 11
-      %li
-        %a.list-group-item 12
-  %div.tags-section__subject
-    Subject
-    %select{class: "form-control"}
-      %option Choose Subject
-      %option Math
-      %option Science
-  %div.tags-section__gender
-    Gender
-    %select{class: "form-control"}
-      %option Choose Gender
-      %option Male
-      %option Female
-      %option Other
+  %div
+    %div.tags-section__grade
+      %p Grade
+      %ul.tags-section__grade-items.list-group.grade-levels.push-down
+        %li
+          %a.list-group-item 9
+        %li
+          %a.list-group-item 10
+        %li
+          %a.list-group-item 11
+        %li
+          %a.list-group-item 12
+    %div.tags-section__subject
+      %p Subject
+      %select{class: "form-control push-down"}
+        %option Choose Subject
+        %option Math
+        %option Science
+    %div.tags-section__gender
+      %p Gender
+      %select{class: "form-control"}
+        %option Choose Gender
+        %option Male
+        %option Female
+        %option Other
 
