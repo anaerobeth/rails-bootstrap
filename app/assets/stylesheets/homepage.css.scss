@@ -88,7 +88,7 @@ $item-padding: 5px;
 }
 
 .bump-right {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .bump-left {
@@ -98,17 +98,31 @@ $item-padding: 5px;
 .bump-up {
   margin-top: -20px;
 }
+
 // ----- Section styles -----
 
-$section-width: 228px;
+$section-width: 235px;
 $section-margin: 10px;
 $section-padding: 15px;
 $section-font-size: 18px;
-$graph-width: 480px;
-$graph-height: 270px;
+
+.navbar-header a.navbar-brand.acme-logo {
+  text-indent: -9999px;
+  margin-left: -50px;
+  padding: 0;
+  display: block;
+  width: 215px;
+  height: 70px;
+  background-color: $color-beta;
+  background-image: image-url('logo-transparent.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+}
 
 .banner {
   display: inline-block;
+  padding-left: 10px;
 }
 
 .datebox {
@@ -132,6 +146,17 @@ $graph-height: 270px;
   }
 }
 
+.groups-section .groups-section__items.list-group {
+  margin-bottom: 15px;
+}
+
+.people-section .people-section__items.list-group {
+  margin-bottom: 15px;
+}
+
+.school-section .school-section__items.list-group {
+  margin-bottom: 15px;
+}
 .display-section__primary,
 .display-section__secondary,
 .results-section__primary {
@@ -152,10 +177,14 @@ $graph-height: 270px;
 
 .community-section,
 .display-section,
+.results-section,
 .school-section {
   margin-top: 20px;
   p {
     font-size: $section-font-size;
+  }
+  h3 {
+    padding-left: 10px;
   }
 }
 .school-section ul {
@@ -204,6 +233,13 @@ $graph-height: 270px;
   li {
     display: inline-block;
   }
+  form {
+    padding-right: 14px;
+  }
+}
+
+.livequestions-section__subhead {
+  padding-right: 14px;
 }
 
 .livequestions-section__counter {
@@ -241,6 +277,9 @@ input.form-control {
 
 // ----- Graphs and Charts ----
 
+$graph-width: 495px;
+$graph-height: 270px;
+
 .community-section__graph1,
 .community-section__graph2,
 .results-section__graph1,
@@ -256,6 +295,7 @@ input.form-control {
 #response_graph {
   width: $graph-width;
   height:$graph-height;
+  padding-left: 5px;
 }
 
 #teacher_graph, #administrator_graph {
