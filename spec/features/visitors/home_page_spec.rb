@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'Home page' do
-  scenario 'visit the home page' do
+  scenario 'visit the home page', :js do
     visit root_path
 
     # header
@@ -11,7 +11,6 @@ feature 'Home page' do
 
     # school section
     within '.school-section' do
-      binding.pry
       expect(page).to have_content 'Our School'
       expect(page).to have_link 'Founders Memorial'
     end
@@ -57,14 +56,14 @@ feature 'Home page' do
         #expect(page).to have_content 'T'
       #end
 
-      expect(page).to have_css('svg')
-      expect(page).to have_content 'Response'
+      expect(page).to have_content 'Response Rates'
     end
+    expect(page).to have_css('svg')
 
     #  live questions section
     within '.livequestions-section' do
       within '.livequestions-section__title' do
-        expect(page).to have_content 'LIVEQUESTIONS'
+        expect(page).to have_content /LIVEQUESTIONS/i
       end
 
       within '.livequestions-section__subhead' do
@@ -72,7 +71,7 @@ feature 'Home page' do
       end
 
       expect(page).to have_content 'Text'
-      expect(page).to have_content 'Response Options'
+      expect(page).to have_content 'Response'
       expect(page).to have_content 'Schedule'
       expect(page).to have_button 'SEND NOW'
       #pending content for calendar section
@@ -112,7 +111,7 @@ feature 'Home page' do
 
       within '.results-section__secondary' do
         expect(page).to have_content 'Search'
-        expect(page).to have_input 'search'
+        page.assert_selector('input#search-result', :count => 1)
       end
 
       within '.results-section__graph1' do
