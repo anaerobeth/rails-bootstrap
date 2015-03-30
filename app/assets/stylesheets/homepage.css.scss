@@ -236,6 +236,10 @@ ul.tags-section__grade-items {
   }
 }
 
+.groups-section__items.list-group li,
+.people-section__items.list-group li{
+  margin-top: 2px;
+}
 
 .results-section__secondary {
   width: $section-width;
