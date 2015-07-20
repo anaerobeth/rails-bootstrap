@@ -3,10 +3,13 @@
     %h3.text-uppercase
       PREVIOUS
       %span.lighten>VISUALIZATIONS
-  %p.panel-heading.lighten Map of Boston Bike Trips, Collisions and Paths
+  %p.panel-heading Map of Boston Bike Trips, Collisions and Paths
   %div.community-section__graph1
-    %div#community_graph
+    %div#hubhacks_graph
+      %iframe{:src =>"https://public.tableau.com/views/BostonStreetswithmostCollisionsperdistance/Page1?:embed=y&amp;:showVizHome=no&amp;:display_static_image=y"}
+      %p.lighten Credit: Created for Hubhacks2 Challenge by E.Tenorio, A.Ross, C.Wand and P.Wilson
+  %p.panel-heading Collisions on Selected Boston Streets
+  %div.community-section__graph1
+    %div#hubhacks_graph
       %iframe{:src =>"https://public.tableau.com/views/BostonStreetswithmostCollisionsperdistance/Page4?:embed=y&amp;:showVizHome=no&amp;:display_static_image=y"}
-  %p.panel-heading.lighten Collisions on Selected Boston Streets
-  %div.community-section__graph2
-    %div#response_graph
+      %p.lighten Credit: Created for Hubhacks2 Challenge by E.Tenorio, A.Ross, C.Wand and P.Wilson
