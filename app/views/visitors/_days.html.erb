@@ -2,17 +2,18 @@
   $(function () {
     new Highcharts.Chart({
       chart:  {
-        renderTo: 'community_graph',
+        renderTo: 'response_graph',
         type: 'line'
       },
 
       title: {
-          text: 'Monthly Average Collisons',
+          text: 'Average Collisons Per Day',
           x: 0 //center
       },
       xAxis: {
-          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: [
+          'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'
+        ]
       },
       yAxis: {
           title: {
@@ -31,8 +32,10 @@
       credits: false,
 
       series: [{
-          name: 'Ave. Collisions Each Month',
-          data: [12.7, 18.7, 34.7, 44.7, 57.3, 71.3, 75.7, 79.7, 82.3, 57, 41.3, 23.7]
+          name: 'Ave. Collisions Each Day',
+          data: [
+            102, 91, 90, 102, 101, 65, 62
+          ]
       }]
     });
   });
