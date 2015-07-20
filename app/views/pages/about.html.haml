@@ -16,17 +16,17 @@
 <li>The official Boston Police Department narrative describing the incident.</li>
 </ol>
 
-<p>An official analysis of this dataset has been discussed in the <a href="http://www.cityofboston.gov/news/uploads/16776_49_15_27.pdf">Boston Cyclist Safety Report of 2013</a>. I have also participated in a <a href="http://hubhacks-vermonster.s3-website-us-west-2.amazonaws.com/">Hubhacks2 data visualization challenge</a> organized by the City of Boston where my team created interesting visualizations using this and the two other datasets listed in this Tech Challenge. My proposed project for Data Incubator will go beyond the limited visualizations done during the Hubhacks challenge. </p>
+<p>An official analysis of this dataset has been published in the <a href="http://www.cityofboston.gov/news/uploads/16776_49_15_27.pdf">Boston Cyclist Safety Report of 2013</a>. I have also participated in a <a href="http://hubhacks-vermonster.s3-website-us-west-2.amazonaws.com/">Hubhacks2 data visualization challenge</a> organized by the City of Boston where my team created interesting visualizations using this and the two other datasets listed in this Tech Challenge. My proposed project for Data Incubator will go beyond the limited visualizations done during the Hubhacks challenge. </p>
 
 <h3>Bicycle Trips dataset</h3>
 
-<p><a href='http://runkeeper.com'>Runkeeper</a> is a mobile app that enables hikers, runners and cyclists to track their runs, walks and other health-related data. I was able to obtain Runkeeper's data on running and biking in Boston between 2010 and 2015 when it was made available to the participants of Hubhacks2 challenge in March 2015. hThe data set has five variables: 'Latitude', 'Longitude', 'Activity Type', 'Datetime', 'Route ID'. By filtering the data for 'Activity Type' for cycling and grouping the records by Route ID, we were able to build a map of all the cycling routes in the dataset</p>
+<p><a href='http://runkeeper.com'>Runkeeper</a> is a mobile app that enables hikers, runners and cyclists to track their runs, walks and other health-related data. I was able to obtain Runkeeper's data on running and biking in Boston between 2010 and 2015 when it was made available to the participants of Hubhacks2 challenge in March 2015. The data set has five variables: 'Latitude', 'Longitude', 'Activity Type', 'Datetime', 'Route ID'. By filtering the data for 'Activity Type' for cycling and grouping the records by Route ID, we were able to build <a href="https://public.tableau.com/views/BostonStreetswithmostCollisionsperdistance/Page1?:embed=y&amp;:showVizHome=no&amp;:display_static_image=y">a map of all the Runkeeper cycling routes</a> in the dataset (select the green Runkeeper Route layer on the map).</p>
 
-<p>
-</p>
+<p>The Runkeeper data used in the map only spans 157 distinct biking trips covering 2240 kilometers. More data points will improve the quality of analysis and predictions possible in this type of study.</p>
 
 <h3>Bicycle Facilities dataset</h3>
 
+<p> By scraping the website for JSON data used by Leaflet.js to render the maps, we were able to build <a href="https://public.tableau.com/views/BostonStreetswithmostCollisionsperdistance/Page1?:embed=y&amp;:showVizHome=no&amp;:display_static_image=y">a map of all existing and proposed bicycle facilities in Boston </a>(select the blue Bike path layer on the map).</p>
 <p>
 This web application was created by Elizabeth Tenorio
 </p>
