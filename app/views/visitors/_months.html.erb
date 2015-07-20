@@ -1,0 +1,40 @@
+<script type='text/javascript'>
+  $(function () {
+    new Highcharts.Chart({
+      chart:  {
+        renderTo: 'community_graph',
+        type: 'line'
+      },
+
+      title: {
+          text: 'Average Collisons Per Month',
+          x: 0 //center
+      },
+      xAxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+              'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      },
+      yAxis: {
+          title: {
+              text: 'Average Collisions'
+          },
+          plotLines: [{
+              value: 0,
+              width: 1,
+              color: '#808080'
+          }]
+      },
+      tooltip: {
+          valueSuffix: ''
+      },
+
+      credits: false,
+
+      series: [{
+          name: 'Ave. Collisions Each Month',
+          data: [12.7, 18.7, 34.7, 44.7, 57.3, 71.3, 75.7, 79.7, 82.3, 57, 41.3, 23.7]
+      }]
+    });
+  });
+
+</script>
