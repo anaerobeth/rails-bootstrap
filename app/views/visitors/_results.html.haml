@@ -10,10 +10,12 @@
       = render 'gender'
     %div.graph-legend
       = render 'gender_legends'
+    %p.lighten In EMS collisions where gender is reported, male riders outnumber females. This does not necessarily mean that male riders are more prone to bike crashes than females because about 70% of recorded bike trips in the city are conducted by men.
   %div.results-section__graph2
     %p.line-separator.bump-right
-    %p.bump-right Helmet usage is less frequent in cylists involved in accidents
+    %p.bump-right Helmet usage is lower in cylists involved in accidents.
     %div#administrator_graph.pull-left
-      = render 'visitors/donut2'
+      = render 'helmet'
     %div.graph-legend
-      = render 'visitors/legends2'
+      = render 'helmet_legends'
+    %p.lighten In EMS collisions where helmet use is reported, riders without helmet are overwelming majority. It would be interesting to explore if risk-taking behaviors such us not-wearing a helmet is related to frequency of accidents.
