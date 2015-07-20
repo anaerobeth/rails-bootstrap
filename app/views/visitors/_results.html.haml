@@ -1,26 +1,21 @@
 %div.results-section.panel
   %div.results-section__title
     %h3.text-uppercase
-      %strong Results
-  %div.results-section__primary.bump-right
-    = render 'visitors/criteria'
-  %div.results-section__secondary
-    %ul
-      %li.pull-left
-        %p Search
-      %li.pull-right
-        %input{type:"search", class:"search-query", id: "search-result", name: "search-result"}
+      PRELIMINARY
+      %span.lighten>Results
   %div.results-section__graph1.push-down
     %p.line-separator.bump-right
-    %p.bump-right This week my teacher let me know that I did a good job.
+    %p.bump-right A bicycle accident is more likely to involve a male than a female
     %div#teacher_graph.pull-left
-      = render 'visitors/donut1'
+      = render 'gender'
     %div.graph-legend
-      = render 'visitors/legends1'
+      = render 'gender_legends'
+    %p.lighten In EMS collisions where gender is reported, male riders outnumber females. This does not necessarily mean that male riders are more prone to bike crashes than females because about 70% of recorded bike trips in the city are conducted by men.
   %div.results-section__graph2
     %p.line-separator.bump-right
-    %p.bump-right Our school administrators looked out for our needs this week.
+    %p.bump-right Helmet usage is lower in cylists involved in accidents.
     %div#administrator_graph.pull-left
-      = render 'visitors/donut2'
+      = render 'helmet'
     %div.graph-legend
-      = render 'visitors/legends2'
+      = render 'helmet_legends'
+    %p.lighten In EMS collisions where helmet use is reported, riders without helmet are overwelming majority. It would be interesting to explore if risk-taking behaviors such us not-wearing a helmet is related to frequency of accidents.

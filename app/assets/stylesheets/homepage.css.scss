@@ -326,6 +326,12 @@ $graph-height: 270px;
   padding-left: 5px;
 }
 
+#hubhacks_graph iframe {
+  width: 1010px;
+  height: 880px;
+  padding-left: 5px;
+}
+
 #teacher_graph, #administrator_graph {
   width: $graph-width * 0.4;
   height:$graph-height * 0.6;

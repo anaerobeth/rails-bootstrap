@@ -1,9 +1,5 @@
 %nav.navbar.navbar-default.navbar-fixed-top
   .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-      = link_to 'ACME', root_path, class: 'navbar-brand acme-logo'
     .collapse.navbar-collapse
       %ul.nav.navbar-nav
         = render 'layouts/navigation_links'

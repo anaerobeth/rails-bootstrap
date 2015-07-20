@@ -1,0 +1,43 @@
+<script type='text/javascript'>
+  $(function () {
+    new Highcharts.Chart({
+      chart:  {
+        renderTo: 'response_graph',
+        type: 'line'
+      },
+
+      title: {
+          text: 'Average Collisons Per Day',
+          x: 0 //center
+      },
+      xAxis: {
+        categories: [
+          'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'
+        ]
+      },
+      yAxis: {
+          title: {
+              text: 'Average Collisions'
+          },
+          plotLines: [{
+              value: 0,
+              width: 1,
+              color: '#808080'
+          }]
+      },
+      tooltip: {
+          valueSuffix: ''
+      },
+
+      credits: false,
+
+      series: [{
+          name: 'Ave. Collisions Each Day',
+          data: [
+            64.2, 68.5, 67.8, 76.5, 76.3, 49, 46.5
+          ]
+      }]
+    });
+  });
+
+</script>

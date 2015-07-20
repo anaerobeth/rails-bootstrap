@@ -1,11 +1,15 @@
 %div.community-section.panel
   %div.community-section__title
     %h3.text-uppercase
-      %strong Community
+      EXPLORATORY
+      %span.lighten>ANALYSIS
   %div.community-section__graph1
     %div#community_graph
-    = render 'visitors/line1'
-  %p.panel-heading.lighten Response Rates
+    = render 'visitors/days'
+    %p.panel-heading.lighten
+      The summer months have the highest average collisions reported. The average collisions is expected to be impacted by seasonal effects. Ridership tends to be low in the winter season, partly explaining the decrease in incidents from December to February. It will be harder to study the correlation between bad weather and collisions since when rainfall is lowest in the summer months, more riders are taking trips.
   %div.community-section__graph2
     %div#response_graph
-    = render 'visitors/line2'
+    = render 'visitors/months'
+    %p.panel-heading.lighten
+      Collisions are the highest on Thursdays and Fridays. An informal survey of Boston cyclists suggests that most cyclists ride to work. Ridership on weekends is believed to be low, hence the lower collision averages.
